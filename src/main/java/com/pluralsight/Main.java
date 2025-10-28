@@ -20,8 +20,8 @@ public class Main {
 
         models.add(new House("MY HOUSE", "yesterday", 5, "over there", 1, 42, 59));
         models.add(new House("Beach house", "last week", 250000, "beach ave", 4, 2000, 5000));
-        models.add(new Vehicle("Toms truck", "tuesday", 5, 53, 2300, "Tesla"));
-        models.add(new Vehicle("My car", "today", 50000, 120000, 5, "Honda"));
+        models.add(new Vehicle("Toms truck", "tuesday", 5000, 53, 3, "Tesla"));
+        models.add(new Vehicle("My car", "today", 50000, 120000, 2, "Honda"));
 
 
         //Example 1
