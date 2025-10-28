@@ -22,7 +22,7 @@ public class Main {
         models.add(new House("Beach house", "last week", 250000, "beach ave", 4, 2000, 5000));
         models.add(new Vehicle("Toms truck", "tuesday", 5, 53, 2300, "Tesla"));
         models.add(new Vehicle("My car", "today", 50000, 120000, 5, "Honda"));
-        counter = 1;
+
 
         //Example 1
         for (Asset asset : models) {
@@ -73,6 +73,18 @@ public class Main {
 
             } else if (model instanceof Vehicle) {
                 Vehicle vehicle = (Vehicle) model;
+                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
+            }
+            System.out.println(message);
+        }
+
+        // Example 5
+        for (Asset model : models) {
+            counter++;
+            if (model instanceof House house) {
+                message = counter + " " + house.getDescription() + " is located at " + house.getAddress();
+
+            } else if (model instanceof Vehicle vehicle) {
                 message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
             }
             System.out.println(message);
