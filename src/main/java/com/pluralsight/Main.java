@@ -11,9 +11,11 @@ public class Main {
     private static int counter;
 
     public static void main(String[] args) {
+        
+        
 
-        Asset newHouse = new House("Dream house", "today", 300000, "123 main st", 2, 2500, 6000);
-        Asset newVehicle = new Vehicle("My car", "last month", 40000, 30000, 2, "Toyota");
+        House newHouse = new House("Dream house", "today", 300000, "123 main st", 2, 2500, 6000);
+        Vehicle newVehicle = new Vehicle("My car", "last month", 40000, 30000, 2, "Toyota");
         models.add(newHouse);
         models.add(newVehicle);
 
@@ -29,7 +31,7 @@ public class Main {
             counter++;
 
             if (asset instanceof House) {
-                message = counter + " " + asset.getDescription() + " is located at " + ((House) asset).getValue();
+                message = counter + " " + asset.getDescription() + " is worth " + ((House) asset).getValue();
             } else if (asset instanceof Vehicle) {
                 message = counter + " " + "This Vehicle is a " + ((Vehicle) asset).getMakeModel() + " and it is worth " + asset.getValue();
             }
@@ -37,58 +39,59 @@ public class Main {
 
         }
 
-        //Example 2
-        for (int i = 0; i < models.size(); i++) {
-            counter++;
-            if (models.get(i) instanceof House) {
-                House house = (House) models.get(i);
-                message = counter + " " + house.getDescription() + " is located at " + house.getValue();
-
-            } else if (models.get(i) instanceof Vehicle) {
-                Vehicle vehicle = (Vehicle) models.get(i);
-                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
-            }
-            System.out.println(message);
-        }
-
-        //Example 3
-        for (int i = 0; i < models.size(); i++) {
-            counter++;
-            if (models.get(i) instanceof House house) {
-                message = counter + " " + house.getDescription() + " is located at " + house.getValue();
-            } else if (models.get(i) instanceof Vehicle vehicle) {
-                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
-            }
-
-
-            System.out.println(message);
-        }
-
-        // Example 4
-        for (Asset model : models) {
-            counter++;
-            if (model instanceof House) {
-                House house = (House) model;
-                message = counter + " " + house.getDescription() + " is located at " + house.getValue();
-
-            } else if (model instanceof Vehicle) {
-                Vehicle vehicle = (Vehicle) model;
-                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
-            }
-            System.out.println(message);
-        }
-
-        // Example 5
-        for (Asset model : models) {
-            counter++;
-            if (model instanceof House house) {
-                message = counter + " " + house.getDescription() + " is located at " + house.getValue();
-
-            } else if (model instanceof Vehicle vehicle) {
-                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
-            }
-            System.out.println(message);
-        }
-
+//        //Example 2
+//        for (int i = 0; i < models.size(); i++) {
+//            counter++;
+//            if (models.get(i) instanceof House) {
+//                House house = (House) models.get(i);
+//                message = counter + " " + house.getDescription() + " is worth " + house.getValue();
+//
+//            } else if (models.get(i) instanceof Vehicle) {
+//                Vehicle vehicle = (Vehicle) models.get(i);
+//                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
+//            }
+//            System.out.println(message);
+//        }
+//
+//        //Example 3
+//        for (int i = 0; i < models.size(); i++) {
+//            counter++;
+//            if (models.get(i) instanceof House house) {
+//                message = counter + " " + house.getDescription() + " is worth " + house.getValue();
+//            } else if (models.get(i) instanceof Vehicle vehicle) {
+//                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
+//            }
+//
+//
+//            System.out.println(message);
+//        }
+//
+//        // Example 4
+//        for (Asset model : models) {
+//            counter++;
+//            if (model instanceof House) {
+//                House house = (House) model;
+//                message = counter + " " + house.getDescription() + " is worth " + house.getValue();
+//
+//            } else if (model instanceof Vehicle) {
+//                Vehicle vehicle = (Vehicle) model;
+//                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
+//            }
+//            System.out.println(message);
+//        }
+//
+//        // Example 5
+//        for (Asset model : models) {
+//            counter++;
+//            if (model instanceof House house) {
+//                message = counter + " " + house.getDescription() + " is worth " + house.getValue();
+//
+//            } else if (model instanceof Vehicle vehicle) {
+//                message = counter + " " + "This Vehicle is a " + vehicle.getMakeModel() + " and it is worth " + vehicle.getValue();
+//            }
+//            System.out.println(message);
+//        }
+//
+//
     }
 }
